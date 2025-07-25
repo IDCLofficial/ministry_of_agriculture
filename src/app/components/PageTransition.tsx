@@ -21,6 +21,7 @@ export default function PageTransition({ children, type = "fade", ...rest }: Pag
         whileInView={animate}
         transition={transition}
         viewport={viewport}
+        className="break-words"
         {...rest}
       >
         {children}
@@ -32,7 +33,7 @@ export default function PageTransition({ children, type = "fade", ...rest }: Pag
   animate = { opacity: 1 };
   transition = { duration: 1.3, ease: "easeInOut" as Easing, ...rest.transition };
   return (
-    <motion.div initial={initial} animate={animate} transition={transition} {...rest}>
+    <motion.div initial={initial} animate={animate} transition={transition} className="break-normal" {...rest}>
       {children}
     </motion.div>
   );
