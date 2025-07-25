@@ -18,7 +18,7 @@ export default function ServicesHeroSection() {
                         initial={{ opacity: 1 }}
                         animate={{}}
                     >
-                        {"Inspiring Youth and Nurturing Talent for a Brighter Future".split("").map((char, idx) => (
+                        {"Empowering Imo State Through Tourism, Culture, and Creativity".split("").map((char, idx) => (
                             <motion.span
                                 key={idx}
                                 initial={{ opacity: 0 }}

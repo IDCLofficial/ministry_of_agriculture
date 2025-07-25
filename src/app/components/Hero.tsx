@@ -1,3 +1,6 @@
+"use client"
+
+import { motion } from "framer-motion";
 import PageTransition from "./PageTransition";
 import { Title } from "./Title";
 
@@ -7,9 +10,46 @@ interface HeroProps {
     subtitle: string;
 }
 
+interface HeroImages {
+    bgImage: string;
+}
+
+
+const heroImages: HeroImages[] = [
+    {
+        bgImage: "/images/heroImage.png"
+    },
+    {
+        bgImage: "/images/heroImage2.jpg"
+    },
+    {
+        bgImage: "/images/heroImage3.jpg"
+    }
+];
+
 export const Hero = ({title, caption, subtitle}: HeroProps) => {
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % heroImages.length);
+        }, 5000); // 5 seconds per slide
+        return () => clearInterval(interval);
+    }, []);
+
+    const { bgImage } = heroImages[current];
+
     return(
-        <div className={`h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-[url('/images/heroImage.jpg')] bg-cover bg-center`}>
+        <div className={`h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-cover bg-center overflow-hidden`}>
+            <motion.img
+                key={bgImage}
+                src={bgImage}
+                alt="hero"
+                className="absolute inset-0 w-full h-full object-cover z-0"
+                initial={{ scale: .99}}
+                animate={{ scale: 1}}
+                transition={{ duration: 2, ease: "easeOut" }}
+            />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-0"></div>
             <div className="relative z-10 py-10">
                 <div className="w-full md:w-[60%] flex flex-col gap-8">
@@ -28,7 +68,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
     )
 }
 
-import { ReactNode } from "react";
+import { ReactNode, useEffect, useState } from "react";
 
 interface SubsequentHeroProps {
     children: ReactNode,

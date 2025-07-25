@@ -10,7 +10,7 @@ export default function MediaPage() {
   return (
     <main className="min-h-screen w-full bg-[#F7F9FA] flex flex-col">
       <MediaHeroSection
-        title="Explore Our Media Gallery"
+        title="Explore Our Gallery"
         subtitle="Discover how the Ministry of Youth Development and Talent Hunt empowers young people and nurtures talent for a brighter future."
         backgroundImage="/images/heroImage.png"
       />
@@ -18,8 +18,8 @@ export default function MediaPage() {
         <MediaGalleryGrid items={mediaItems} />
       </section>
       <CTASection 
-        heading="Ready to Experience the New Imo?" 
-        subtext="Discover our vision for an all inclusive and empowered Imo State" 
+        heading="Together we can Promote Tourism and Culture in Imo State" 
+        subtext="Want to get involved or partner with us? Reach out today" 
         buttonLabel="Contact Us" 
         buttonHref="/contact-us"
       />

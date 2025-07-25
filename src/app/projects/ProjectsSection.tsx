@@ -2,45 +2,8 @@
 
 import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
+import { projects } from "./projects";
 
-const projects = [
-    {
-        title: "SkillUpImo & SkillUpImo Challenge",
-        description: "A flagship initiative launched to train 300,000 Imolites in digital skills (2023-2025).- Features weekly innovation competitions with cash prizes for trainees.",
-        image: "/images/projectsHero.png",
-    },
-    {
-        title: "Tech Talent to Jobs (TT2J)",
-        description: "Connects SkillUpImo graduates to job opportunities both locally and abroad.- Partnerships with freelancing platforms and tech employers.",
-        image: "/images/road.jpg"
-    },
-    {
-        title: "Youth Talent Discovery & Talent Hunt Programs",
-        description: "Talent hunts in sports, ICT, agriculture, business, and arts.- Talents are referred to relevant state agencies for further development.",
-        image: "/images/road.jpg"
-    },      
-    {
-        title: "Youth Security & Civic Reorientation Summit",
-        description: "Statewide summit promoting peace, civic engagement, and anti-crime orientation.- Held in partnership with security agencies.",
-        image: "/images/road.jpg"
-    },      
-    {
-        title: "Grassroots Youth Engagement via Youth Officers",
-        description: "Deployment of youth officers in 27 LGAs to implement development programs.",
-        image: "/images/road.jpg"
-    },      
-    {
-        title: "Youth Empowerment & Economic Intervention (IMYEIP)",
-        description: "A N6 billion state intervention to empower 500,000 youths with training and capital.- N2 billion takeoff fund announced in late 2025.",
-        image: "/images/road.jpg"
-    },      
-    {
-        title: "Additional Youth Programs- Youth Farms Master Class, Youth Leadership Training Centers, 'Youth Must Work' Scheme.",
-        description: "Over N520 million distributed in the LGA Youth Empowerment Program.- Launch of Imo Youth Data Bank for digital youth engagement tracking.",
-        image: "/images/road.jpg"
-    },      
-    
-]
 
 const PROJECTS_PER_PAGE = 2;
 

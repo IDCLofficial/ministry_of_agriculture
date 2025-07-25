@@ -2,52 +2,24 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    imgSrc: "/images/tech-dev.png", // Replace with actual image paths
-    title: "Youth Empowerment & Capacity Building",
-    description:
-      "Organizes skills acquisition, vocational training, and entrepreneurship bootcamps. Provides access to start-up kits, tools, or microgrants for trained youths. Key Program: SkillUpImo - training 300,000 youths in digital and tech skills.",
+    imgSrc: "/images/tech-dev.png",
+    title: "Tourism Development",
+    description: "Promotes tourist sites like Oguta Lake, Njaba River, Mbari Cultural Center, and Owerri Amusement Park.\n\nCollaborates with private investors to develop hospitality infrastructure (hotels, resorts, and eco-tourism projects)."
   },
   {
     imgSrc: "/images/e-gov.png",
-    title: "Talent Identification and Nurturing",
-    description:
-      "Hosts talent hunts, creative showcases, sports events, and innovation competitions. Partners with organizations to expose youth in sports, ICT, music, and entertainment.",
+    title: "Cultural Preservation",
+    description: "Documents and promotes Igbo traditions, festivals, dances, and artifacts.\n\nSupports local festivals like Iri Ji (New Yam Festival) and Imo Carnival."
   },
   {
     imgSrc: "/images/cyber-security.png",
-    title: "Civic Reorientation & Leadership Training",
-    description:
-      "Conducts summits and peace-building campaigns like the Imo Youth Civic Reorientation Summit and Running for Peace Marathon. Trains youth leaders and peer educators.",
+    title: "Creative Arts & Entertainment",
+    description: "Encourages Nollywood, music, visual arts, and crafts from Imo State.\n\nProvides platforms for artists through exhibitions, workshops, and grants."
   },
   {
     imgSrc: "/images/training.png",
-    title: "Advocacy & Policy Engagement",
-    description:
-      "Promotes youth-inclusive policies and participation in governance at all levels.",
-  },
-  {
-    imgSrc: "/images/infrastructure.png",
-    title: "Youth Grants & Financial Support",
-    description:
-      "Coordinates empowerment grants (e.g., N250,000 each to 15,000 youth during Youth Day). Links youth to federal/state funding programs and donor support.",
-  },
-  {
-    imgSrc: "/images/single-window.png",
-    title: "Organizing Commemorative Events",
-    description:
-      "Leads International Youth Day and Imo Youth Day celebrations. Launches new initiatives and awards outstanding youth performances.",
-  },
-  {
-    imgSrc: "/images/single-window.png",
-    title: "Digital & Innovation Exposure",
-    description:
-      "Fosters innovation via hackathons, build-a-thons, and tech incubators. Example: Build-a-Thon 2024.",
-  },
-  {
-    imgSrc: "/images/single-window.png",
-    title: "Mentorship & Career Guidance",
-    description:
-      "Links youth with mentors and provides job readiness, CV writing, and personal development support",
+    title: "Economic Growth & Job Creation",
+    description: "Aims to make tourism a major revenue source for Imo State.\n\nEmpowers youths through creative industry training programs."
   },
 
 ];

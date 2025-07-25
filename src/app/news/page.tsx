@@ -14,7 +14,7 @@ export default function NewsPage() {
           <NewsGrid />
         </div>
       </div>
-      <CTASection heading="Ready to Experience the New Imo?" subtext="Discover our vision for an inclusive, empowered, and connected state." buttonLabel="Contact Us" buttonHref="/contact-us"/>
+      <CTASection heading="Together we can Promote Tourism and Culture in Imo State" subtext="Want to get involved or partner with us? Reach out today" buttonLabel="Contact Us" buttonHref="/contact-us"/>
       <Footer />
     </div>
   );

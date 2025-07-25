@@ -3,11 +3,11 @@ import { MVSCard } from "./MVSCard"
 const mvs = [
     {
         title: "Our Mission",
-        description: "To empower Imo State’s youth by creating platforms that discover, develop, and showcase their talents, ensuring these young individuals contribute meaningfully to the state and economy."
+        description: "To develop, promote, and sustain a vibrant tourism and cultural industry in Imo State."
     },
     {
         title: "Our Vision",
-        description: "To position Imo State as a hub for youth excellence by aligning grassroots talent development with global opportunities."
+        description: "To establish Imo State as a premier tourism destination in Nigeria, renowned for its rich cultural heritage, dynamic creative sector, and world-class hospitality, thereby attracting both local and international visitors while enhancing the state’s global image."
     }
 ]   
 

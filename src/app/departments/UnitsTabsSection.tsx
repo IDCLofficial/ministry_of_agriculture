@@ -5,34 +5,39 @@ import Image from "next/image";
 
 const departments = [
   {
-    name: "Youth Development",
+    name: "Department of Tourism Development",
     image: "/images/aboutUs1.png",
-    description: "Program design, skills acquisition, talent hunts, youth empowerment coordination",
+    description: "Identifies, develops, and promotes tourist sites across Imo State, coordinates tourism investment initiatives and eco-tourism projects and oversees tourism promotion and branding."
   },
   {
-    name: "Administration & Supplies",
+    name: "Department of Culture and Heritage",
     image: "/images/aboutUs1.png",
-    description: "HR, logistics, procurement, correspondence",
+    description: "Preserves and promotes traditional arts, language, festivals, and heritage sites and organizes cultural festivals, and coordinates with local cultural institutions."
   },
   {
-    name: "Finance & Accounts",
+    name: "Department of Creative Arts",
     image: "/images/aboutUs1.png",
-    description: "Budgeting, financial controls, audits",
+    description: "Supports local artists, performers, and creative industries, and develops cultural entrepreneurship programs and promotes Nollywood-related activities."
   },
   {
-    name: "Planning, Research & Statistics",
+    name: "Department of Planning, Research & Statistics (PRS)",
     image: "/images/aboutUs1.png",
-    description: "Monitoring, evaluation, data collection, policy planning",
+    description: "Develops tourism and cultural sector policies and strategic plans, also conducts surveys, data analysis, and performance evaluation."
   },
   {
-    name: "Public Affairs / Media & Publicity",
+    name: "Department of Finance & Accounts",
     image: "/images/aboutUs1.png",
-    description: "Communications, events coverage, press liaison",
+    description: "Manages budgeting, revenue, and financial reporting for the ministry, and oversees expenditure, audits, and compliance."
   },
   {
-    name: "Youth Mobilization & Outreach",
+    name: "Department of Administration & Supplies",
     image: "/images/aboutUs1.png",
-    description: "Grassroots engagement, local government liaisons, volunteer coordination",
+    description: "Handles staffing, procurement, logistics, and general administration within the ministry, and maintains internal correspondence and records."
+  },
+  {
+    name: "Department of Public Affairs / Press Unit",
+    image: "/images/aboutUs1.png",
+    description: "Manages media relations, public communications, and stakeholder engagement, and promotes ministry activities via radio, TV, and digital channels."
   },
 ];
 

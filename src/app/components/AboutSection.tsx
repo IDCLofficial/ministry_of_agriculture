@@ -21,7 +21,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 <Title label={title}/>
                 <h2 className="text-2xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4 py-4">
                     Our Mandate — Mininstry of <br/>
-                    <span className="text-green-400"> Youth Development and Talent Hunt</span>
+                    <span className="text-green-400"> Tourism, Hospitality and Culture</span>
                 </h2>
               </PageTransition>
             </div>

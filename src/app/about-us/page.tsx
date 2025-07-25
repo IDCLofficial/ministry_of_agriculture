@@ -17,9 +17,9 @@ const teamMembers = Array(4).fill({
 export default function AboutUs() {
     return (
         <div className="h-screen">
-            <AboutUsHero ministryName="Ministry of Sports and Youth Development" />
+            <AboutUsHero ministryName="Ministry of Tourism, Hospitality and Culture" />
             <AboutSection 
-                aboutText="The Imo State Ministry of Youth Development & Talent Hunt is dedicated to building a dynamic, empowered, and innovative youth population in Imo State. Under the leadership of Hon. Emeka Mandela Ukaegbu, the Ministry works to foster strong synergy between the state government and its youth by discovering, nurturing, and projecting young talents across diverse sectors such as sports, creative arts, ICT, agriculture, and entrepreneurship. Through this collaborative approach, the Ministry partners with key stakeholders like the Imo State Sports Commission, Sports Writers Association of Nigeria (SWAN), Nigerian Army (34 Artillery Brigade, Obinze), and DSS, to deliver impactful programs—ranging from football scouting and civic reorientation to mentorship and security awareness initiatives."
+                aboutText="The Imo State Ministry of Tourism, Creative Arts, and Culture is a government agency responsible for promoting tourism, preserving cultural heritage, and fostering creative arts in Imo State, Nigeria. The ministry plays a key role in developing tourist attractions, organizing cultural events, and boosting the state’s economy through tourism."
                 imgSrc="/images/homeImage1.jpg" 
                 altText="Ministry of Sports and Youth Development conference event" 
             />
@@ -33,7 +33,7 @@ export default function AboutUs() {
                 <AppLink href="/about-us/team" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
             </section>
             <CTASection 
-                heading="Join Us to Transform the Imo Youths"
+                heading="Join Us to Promote Tourism and Culture in Imo State"
                 buttonLabel="See Our Projects"
                 buttonHref="/projects"
             />

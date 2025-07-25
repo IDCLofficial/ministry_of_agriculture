@@ -7,24 +7,24 @@ interface StructuresSectionProps {
 export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
     const departments = [
         {
-            title: "Administration & Supplies",
-            description: "Deploys and supervises Youth Development Officers (YDOs) across all 27 LGAs, serving as grassroots liaisons for ministry programs, gathering feedback, and promoting youth participation at the community level."
+            title: "Department of Tourism Development",
+            description: "Identifies, develops, and promotes tourist sites across Imo State, coordinates tourism investment initiatives and eco-tourism projects and oversees tourism promotion and branding."
         },
         {
-            title: "Finance & Accounts",
-            description: "Organizes and manages state-wide talent scouting programs (e.g., football tournaments, chess competitions, marathons) in collaboration with the Imo Sports Commission, discovering, training, and promoting young talents."
+            title: "Department of Culture and Heritage",
+            description: "Preserves and promotes traditional arts, language, festivals, and heritage sites and organizes cultural festivals, and coordinates with local cultural institutions."
         },
         {
-            title: "Planning, Research & Statistics",
-            description: "Promotes civic education and reorientation among youth, fostering responsible citizenship and community engagement through targeted programs and outreach."
+            title: "Department of Creative Arts",
+            description: "Supports local artists, performers, and creative industries, and develops cultural entrepreneurship programs and promotes Nollywood-related activities."
         },
         {
-            title: "Public Affairs / Media & Publicity",
-            description:"Communications, events coverage, press liaison"
+            title: "Department of Planning, Research & Statistics (PRS)",
+            description: "Develops tourism and cultural sector policies and strategic plans, also conducts surveys, data analysis, and performance evaluation."
         },
         {
-            title:"Youth Mobilization & Outreach",
-            description:"Grassroots engagement, local government liaisons, volunteer coordination"
+            title: "Department of Finance & Accounts",
+            description: "Manages budgeting, revenue, and financial reporting for the ministry, and oversees expenditure, audits, and compliance."
         }
         
     ]
@@ -38,7 +38,7 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                     Our Structure
                 </h2>
                 <p className="text-white text-base md:text-[1rem] mb-8 md:mb-16 w-full md:w-[60%] mx-auto">
-                    The Ministry is divided into specialized departments that collectively drive Imo&apos;s vision of youth empowerment, talent development, and civic engagement.
+                    The Ministry is divided into specialized departments that work collectively to achieve the ministry&apos;s objectives.
                 </p>
                 {/* Main Image */}
                 <div className="relative w-full h-[180px] md:h-[500px] rounded-xl overflow-hidden shadow-lg mb-8 md:mb-20">

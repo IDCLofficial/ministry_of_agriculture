@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Youth Development and Talent Hunt",
-    description: "The Imo State Ministry of Youth Development and Talent Hunt is dedicated to nurturing talent, fostering innovation, and creating opportunities for youth empowerment through community engagement, building a vibrant and productive future for all Imolites.",
+    ministry: "Tourism, Creative Arts and Culture",
+    description: "The Imo State Ministry of Tourism, Creative Arts, and Culture is a government agency responsible for promoting tourism, preserving cultural heritage, and fostering creative arts in Imo State, Nigeria. The ministry plays a key role in developing tourist attractions, organizing cultural events, and boosting the state’s economy through tourism.",
     quickLinks: [
         {
             label: "Projects",
@@ -43,15 +43,15 @@ const info = {
     ],
     contact: [
         {
-            label: "+2349130270514",
+            label: "+0803 092 5349",
             href: "/"
         },
         {
-            label: "Info@myd.im.gov.ng",
+            label: "imotcac@yahoo.com",
             href: "/"
         },  
         {
-            label: "28 Egbu Road, Owerri, Imo State",
+            label: "Block 8 Ministry of Tourism, Creative Arts and culture, Imo State Secretariat, along Port Harcourt road, Owerri Owerri, Nigeria 460271",
             href: "/"
         },
     ]

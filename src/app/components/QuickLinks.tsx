@@ -30,7 +30,7 @@ const links = [
 
 export default function QuickLinks() {
   return (
-    <section className="w-full p-4 md:p-8 py-10 md:py-16 bg-[#f3f8fa]">
+    <section className="w-full p-4 md:p-8 py-10 md:py-16">
       <h2 className="text-dark-primary text-2xl md:text-3xl lg:text-[43px] font-medium text-center mb-8 md:mb-12">Quick Links</h2>
       <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 px-0 md:px-4">
         {links.map((link) => (
