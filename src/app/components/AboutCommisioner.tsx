@@ -26,7 +26,7 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
             <div className="flex-1 w-full md:w-auto mt-6 md:mt-0">
                 <h2 className="text-xl md:text-2xl lg:text-[43px] font-bold text-dark-primary mb-4">{title}</h2>
                 <p className="text-dark-primary-body text-base mb-4">
-                Hon. Jerry E. Egemba hails from Umunumo-Amairi in Ehime-Mbano Local Government Area of Imo State and serves as the Commissioner for Tourism, Hospitality, and Culture in Imo State, Nigeria. He was appointed by Governor Hope Uzodimma and has been actively involved in initiatives to promote the state's cultural heritage and tourism sector.
+                Hon. Jerry E. Egemba hails from Umunumo-Amairi in Ehime-Mbano Local Government Area of Imo State and serves as the Commissioner for Tourism, Hospitality, and Culture in Imo State, Nigeria. He was appointed by Governor Hope Uzodimma and has been actively involved in initiatives to promote the state&apos;s cultural heritage and tourism sector.
                 </p>
                 {/* <p className="text-dark-primary-body text-base mb-6 text-justify">
                     His vision for the Ministry of Budget, Economic Planning & Statistics is rooted in transparency, inclusivity, and innovation. Dr. Osuala is committed to making Imo State’s budgeting process open and accessible, exemplified by his introduction 
