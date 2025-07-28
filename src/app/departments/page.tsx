@@ -8,7 +8,7 @@ export default function DepartmentsPage() {
     <div className="bg-white">
       <UnitsHeroSection />
       <UnitsTabsSection />
-      <CTASection heading="Join Us to Promote Tourism and Culture in Imo State" buttonLabel="Contact Us" buttonHref="/contact-us"/>
+      <CTASection heading="Partner with Us to Transform Agriculture in Imo State" buttonLabel="Contact Us" buttonHref="/contact-us"/>
       <Footer />
     </div>
   );

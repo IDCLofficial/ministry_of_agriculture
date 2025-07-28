@@ -2,26 +2,25 @@ import { Hero } from "@/app/components/Hero";
 import AboutSection from "@/app/components/AboutSection";
 import AboutCommisioner from "@/app/components/AboutCommisioner";
 import QuickLinks from "@/app/components/QuickLinks";
-import LatestNews from "@/app/components/LatestNews";
 // import Stats from "@/app/components/Stats";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import FeaturedInitiatives from "./components/FeaturedInitiatives";
-import TourismSites from "./components/TourismSites";
+import FeaturedPartners from "./components/FeaturedPartners";
 
 export default function Home() {
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
-        title="Imo State Ministry of Tourism, Hospitality and Culture" 
-        caption="Showcasing Imo's cultural assets through events, festivals, and heritage sites." 
-        subtitle="Promoting tourism, celebrating hospitality, and preserving the rich cultural heritage of Imo State."
+        title="Imo State Ministry of Agriculture" 
+        caption="Feeding Imo, Empowering Farmers" 
+        subtitle="Driving agricultural innovation and food security through inclusive, sustainable practices."
       />
       <AboutSection 
         title="About Us"
-        subtitle="To establish Imo State as a premier tourism destination in Nigeria, renowned for its rich cultural heritage, dynamic creative sector, and world-class hospitality, thereby attracting both local and international visitors while enhancing the state’s global image."
-        image1="/images/homeImage1.jpg"
-        image2="/images/homeImage2.jpg"
+        subtitle="The Ministry of Agriculture and Food Security in Imo State was established to spearhead agricultural development and rural transformation. Since its creation in the early years of the state’s formation in 1976, the ministry has evolved through reforms, focusing on food production, agro-industrial growth, farmer support, and policy-driven agricultural transformation across the state."
+        image1="/images/agriculture.jpg"
+        image2="/images/agriculture2.jpg"
       />
       <AboutCommisioner 
         imgSrc="/images/commissioner.jpg" 
@@ -29,7 +28,7 @@ export default function Home() {
       />
       <section className="w-full flex flex-col gap-4">
         <FeaturedInitiatives />
-        <TourismSites />
+        <FeaturedPartners />
         <QuickLinks />
         {/* <Advertisement /> */}
       </section>
@@ -37,7 +36,7 @@ export default function Home() {
       {/* <FeaturedPartners /> */}
       <CTASection 
         heading="Partner with Us Today!"
-        subtext="You can partner with us in various ways, including but not limited to: Sponsoring our events, providing financial support, or partnering with us on a project."
+        subtext="Join us in cultivating a prosperous future for Imo State. Together, we can empower farmers, boost food security, and drive sustainable agricultural growth for every community."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />

@@ -15,7 +15,7 @@ const TeamGridSection: React.FC<TeamGridSectionProps> = ({ members }) => {
   return (
     <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto" id="team">
       <h2 className="text-2xl md:text-3xl lg:text-[43px] font-medium text-center mb-6 md:mb-10 text-dark-primary">Our Team</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-10" id="team">
         {members.map((member, idx) => (
           <div key={idx} className="flex flex-col rounded-xl">
             <div className="w-full mb-2 md:mb-4 relative">

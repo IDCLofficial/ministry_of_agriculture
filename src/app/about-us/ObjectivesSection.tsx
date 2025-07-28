@@ -1,33 +1,38 @@
 export const ObjectivesSection = () => {
-    const agencies = [
+    const agencies: { title: string; description: string }[] = [
         {
-            title: "Imo State Tourism Board",
-            description: "Responsible for developing, promoting, and regulating tourism activities in Imo State. The Board works to harness the state's tourism potential, attract investment, and boost economic development through tourism initiatives and policy implementation."
+            title: "Food Security",
+            description: "Guarantee consistent access to sufficient, nutritious, and affordable food for all."
         },
         {
-            title: "Nekede Zoological Garden",
-            description: "A conservation and recreational center dedicated to the preservation of wildlife, environmental education, and public awareness. The garden provides opportunities for research, tourism, and leisure, while supporting biodiversity and wildlife conservation in Imo State."
+            title: "Farmer Empowerment",
+            description: "Provide farmers with training, modern tools, inputs, and financial support."
         },
         {
-            title: "Mbari Cultural & Arts Centre",
-            description: "A cultural institution that preserves, promotes, and showcases Igbo art, culture, and heritage. The Centre serves as a venue for exhibitions, performances, and festivals, fostering cultural education and supporting local artists and artisans."
+            title: "Agribusiness Development",
+            description: "Encourage investment in agro-processing and value chain development."
         },
         {
-            title: "Imo State Tourism Information Office",
-            description: "Provides information and guidance to tourists and visitors about attractions, events, and services in Imo State. The office supports tourism development by facilitating access to resources and promoting the state's tourism assets."
+            title: "Youth and Women Inclusion",
+            description: "Promote youth and women participation in agriculture through targeted programs."
         },
         {
-            title: "Imo State Investment Promotion Agency (ISIPA)",
-            description: "The agency is tasked with attracting, facilitating, and supporting investments in Imo State. ISIPA provides information, incentives, and support services to investors, promotes investment opportunities, and works to improve the state's business environment."
+            title: "Rural Infrastructure Development",
+            description: "Improve roads, irrigation, storage, and market facilities in rural areas."
+        },
+        {
+            title: "Climate-Smart Agriculture",
+            description: "Support environmentally sustainable and resilient farming systems."
+        },
+        {
+            title: "Research and Innovation",
+            description: "Invest in agricultural research, technology adoption, and extension services for improved productivity."
         }
     ];
 
     const coreValues = [
         "Enlightenment",
-        "Engagement",
         "Empowerment",
-        "Inclusiveness",
-        "Integrity",
         "Excellence",
         "Social Responsibility"
     ];

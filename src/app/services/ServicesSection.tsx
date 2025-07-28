@@ -2,24 +2,34 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    imgSrc: "/images/tech-dev.png",
-    title: "Tourism Development",
-    description: "Promotes tourist sites like Oguta Lake, Njaba River, Mbari Cultural Center, and Owerri Amusement Park.\n\nCollaborates with private investors to develop hospitality infrastructure (hotels, resorts, and eco-tourism projects)."
+    imgSrc: "/images/agric_extension.jpeg",
+    title: "Agricultural Extension Services",
+    description: "On-field support and training for farmers, access to crop and livestock specialists, soil testing and advisory services."
   },
   {
-    imgSrc: "/images/e-gov.png",
-    title: "Cultural Preservation",
-    description: "Documents and promotes Igbo traditions, festivals, dances, and artifacts.\n\nSupports local festivals like Iri Ji (New Yam Festival) and Imo Carnival."
+    imgSrc: "/images/grant.webp",
+    title: "Grant & Subsidy Application",
+    description: "Information on how to apply for: Fertilizer subsidies, Equipment leasing, Youth-in-Agric programs; link to downloadable forms and requirements."
   },
   {
-    imgSrc: "/images/cyber-security.png",
-    title: "Creative Arts & Entertainment",
-    description: "Encourages Nollywood, music, visual arts, and crafts from Imo State.\n\nProvides platforms for artists through exhibitions, workshops, and grants."
+    imgSrc: "/images/farmers_portal.jpg",
+    title: "Farmer Registration Portal",
+    description: "Link to register as a farmer in Imo State, access to inputs, subsidies, and grants, downloadable registration forms."
   },
   {
-    imgSrc: "/images/training.png",
-    title: "Economic Growth & Job Creation",
-    description: "Aims to make tourism a major revenue source for Imo State.\n\nEmpowers youths through creative industry training programs."
+    imgSrc: "/images/landAllocation.jpg",
+    title: "Land Allocation for Farming",
+    description: "How to apply for agricultural land, land use policy documents, contact details for land processing unit. "
+  },
+  {
+    imgSrc: "/images/vertinary.jpg",
+    title: "Veterinary Services",
+    description: "Animal healthcare and vaccinations, schedule of mobile vet clinic visits, request service button"
+  },
+  {
+    imgSrc: "/images/agroProcessing.jpg",
+    title: "Agro-Processing & Storage Support",
+    description: "Info on available state silos and storage centers, assistance for small-scale processors, public-private collaboration guidelines."
   },
 
 ];

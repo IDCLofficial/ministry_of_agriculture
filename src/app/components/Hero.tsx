@@ -37,30 +37,34 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
         return () => clearInterval(interval);
     }, []);
 
-    const { bgImage } = heroImages[current];
+    // const { bgImage } = heroImages[current];
+    const bgVideo = "/videos/heroVideo.mp4";
 
     return(
         <div className={`h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-cover bg-center overflow-hidden`}>
-            <motion.img
-                key={bgImage}
-                src={bgImage}
-                alt="hero"
+            <motion.video
+                key={bgVideo}
+                src={bgVideo}
+                loop
+                muted
+                autoPlay
                 className="absolute inset-0 w-full h-full object-cover z-0"
                 initial={{ scale: .99}}
                 animate={{ scale: 1}}
+                
                 transition={{ duration: 2, ease: "easeOut" }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-transparent z-0"></div>
             <div className="relative z-10 py-10">
-                <div className="w-full md:w-[60%] flex flex-col gap-8">
+                <div className="w-full md:w-[60%] flex flex-col gap-2 pt-[1rem]">
                     <PageTransition type="fadeUp">
                         <Title label={title}/>
-                        <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight py-4">{caption}</h1>
+                        <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight py-2">{caption}</h1>
                         <p className="text-[1rem] leading-[1.5] text-white">
                             {subtitle}
                         </p>
-                        {/* <AppLink href="/about-us" label="Explore Opportunities" variant="secondary" className="block w-max border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
-                font-medium hover:bg-primary-green hover:text-white transition-all duration-300"/> */}
+                        <AppLink href="/contact-us" label="Join Us" variant="primary" className="block w-max border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
+                font-medium hover:bg-white hover:text-black transition-all duration-300 mt-8"/>
                     </PageTransition>
                 </div>
             </div>
@@ -69,6 +73,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
 }
 
 import { ReactNode, useEffect, useState } from "react";
+import { AppLink } from "./AppLink";
 
 interface SubsequentHeroProps {
     children: ReactNode,
@@ -77,7 +82,7 @@ interface SubsequentHeroProps {
 
 export const SubsequentHero = ({ children, className }: SubsequentHeroProps) => {
     return (
-        <div className="relative h-[350px] md:min-h-[80vh] px-2 md:px-[3rem] py-8 md:py-10 flex flex-col justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
+        <div className="relative h-[350px] md:min-h-[80vh] px-2 md:px-[3rem] py-8 md:py-10 flex flex-col justify-end bg-gradient-to-r from-green-900/20 via-black to-black">
             <div className={`absolute inset-0 bg-cover bg-center z-0 ${className}`}></div>
             {children}
         </div>

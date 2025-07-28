@@ -2,44 +2,8 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import { departments } from "./departments";
 
-const departments = [
-  {
-    name: "Department of Tourism Development",
-    image: "/images/aboutUs1.png",
-    description: "Identifies, develops, and promotes tourist sites across Imo State, coordinates tourism investment initiatives and eco-tourism projects and oversees tourism promotion and branding."
-  },
-  {
-    name: "Department of Culture and Heritage",
-    image: "/images/aboutUs1.png",
-    description: "Preserves and promotes traditional arts, language, festivals, and heritage sites and organizes cultural festivals, and coordinates with local cultural institutions."
-  },
-  {
-    name: "Department of Creative Arts",
-    image: "/images/aboutUs1.png",
-    description: "Supports local artists, performers, and creative industries, and develops cultural entrepreneurship programs and promotes Nollywood-related activities."
-  },
-  {
-    name: "Department of Planning, Research & Statistics (PRS)",
-    image: "/images/aboutUs1.png",
-    description: "Develops tourism and cultural sector policies and strategic plans, also conducts surveys, data analysis, and performance evaluation."
-  },
-  {
-    name: "Department of Finance & Accounts",
-    image: "/images/aboutUs1.png",
-    description: "Manages budgeting, revenue, and financial reporting for the ministry, and oversees expenditure, audits, and compliance."
-  },
-  {
-    name: "Department of Administration & Supplies",
-    image: "/images/aboutUs1.png",
-    description: "Handles staffing, procurement, logistics, and general administration within the ministry, and maintains internal correspondence and records."
-  },
-  {
-    name: "Department of Public Affairs / Press Unit",
-    image: "/images/aboutUs1.png",
-    description: "Manages media relations, public communications, and stakeholder engagement, and promotes ministry activities via radio, TV, and digital channels."
-  },
-];
 
 export default function UnitsTabsSection() {
   const [activeIdx, setActiveIdx] = useState(0);

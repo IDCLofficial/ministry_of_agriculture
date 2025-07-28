@@ -10,13 +10,13 @@ const commissionerDescription = `Before his appointment, Dr. Amadi served at the
 \nAs Commissioner, Dr. Amadi introduced the Digital Imo Agenda, aiming to train 100,000 youths, women, and individuals with disabilities in essential 21st-century digital skills, including software development, blockchain, and game development. This initiative is part of a broader mission to build smart cities that leverage digital technology to drive governance, innovation, and entrepreneurship, promoting transformative value creation and prosperity for all.`;
 
 const initiatives = [
-  "SkillUpImo & SkillUpImo Challenge- A flagship initiative launched to train 300,000 Imolites in digital skills (2023-2025).- Features weekly innovation competitions with cash prizes for trainees.",
-  "Tech Talent to Jobs (TT2J)- Connects SkillUpImo graduates to job opportunities both locally and abroad.- Partnerships with freelancing platforms and tech employers.",
-  "Youth Talent Discovery & Talent Hunt Programs- Talent hunts in sports, ICT, agriculture, business, and arts.- Talents are referred to relevant state agencies for further development.",
-  "Youth Security & Civic Reorientation Summit- Statewide summit promoting peace, civic engagement, and anti-crime orientation.- Held in partnership with security agencies.",
-  "Grassroots Youth Engagement via Youth Officers- Deployment of youth officers in 27 LGAs to implement development programs.",
-  "Youth Empowerment & Economic Intervention (IMYEIP)- A N6 billion state intervention to empower 500,000 youths with training and capital.- N2 billion takeoff fund announced in late 2025.",
-  "Additional Youth Programs- Youth Farms Master Class, Youth Leadership Training Centers, 'Youth Must Work' Scheme.- Over N520 million distributed in the LGA Youth Empowerment Program.- Launch of Imo Youth Data Bank for digital youth engagement tracking.",
+  "Agricultural Extension Services – On-field support and training for farmers, access to crop and livestock specialists, soil testing and advisory services.",
+  "Farmer Registration Portal – Link to register as a farmer in Imo State, access to inputs, subsidies, and grants, downloadable registration forms.",
+  "Grant & Subsidy Application – Information on how to apply for: Fertilizer subsidies, Equipment leasing, Youth-in-Agric programs; link to downloadable forms and requirements.",
+  "Land Allocation for Farming – How to apply for agricultural land, land use policy documents, contact details for land processing unit.",
+  "Veterinary Services – Animal healthcare and vaccinations, schedule of mobile vet clinic visits, request service button.",
+  "Agro-Processing & Storage Support – Info on available state silos and storage centers, assistance for small-scale processors, public-private collaboration guidelines.",
+  "Market Linkage Services – Help connecting farmers to local and international buyers, announcements of upcoming market days and trade expos."
 ];
 
 const teamMembers = Array(6).fill({
@@ -29,25 +29,25 @@ export default function TeamPage() {
   return (
     <main className="min-h-screen w-full bg-[#f3f8fa] flex flex-col">
       <HeroSection
-        heading="Leadership Behind the Ministry of Youth Development and Talent Hunt"
+        heading="Leadership Behind the Ministry of Agriculture"
       />
       <CommissionerSection
-        imgSrc="/images/commissioner.jpg"
+        imgSrc="/images/commissioners.jpg"
         heading="Background and Vision"
         description={commissionerDescription}
       />
       <KeyInitiativesSection
         initiatives={initiatives}
-        imgSrc="/images/homeImage3.jpg"
+        imgSrc="/images/agriculture.jpg"
       />
       <TeamGridSection members={teamMembers} />
       <div className="w-full bg-dark-primary text-center py-8 px-4">
         <p className="text-center text-[1rem] font-regular text-white w-[90%] lg:w-[60%] mx-auto">
-            The Imo State Ministry of Youth Development and Talent Hunt is committed to empowering young people and unlocking their full potential through innovative programs, digital skills training, and inclusive opportunities. Guided by visionary leadership, the ministry drives initiatives that nurture talent, foster entrepreneurship, and promote civic engagement among Imo’s youth. Through projects like SkillUpImo, talent discovery events, and youth empowerment workshops, the ministry is building a generation equipped for the challenges and opportunities of the 21st century. By prioritizing digital literacy, leadership development, and economic empowerment, the Ministry of Youth Development and Talent Hunt is shaping a brighter future for all Imolites and inspiring the next wave of innovators, leaders, and change-makers in the state.
+        The Ministry of Agriculture and Food Security in Imo State was established to spearhead agricultural development and rural transformation. Since its creation in the early years of the state’s formation in 1976, the ministry has evolved through reforms, focusing on food production, agro-industrial growth, farmer support, and policy-driven agricultural transformation across the state.
         </p>
       </div>
       <CTASection
-        heading="Empowering Imo’s Youth, Inspiring Champions."
+        heading="Partner with Us to Transform Agriculture in Imo State."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />    

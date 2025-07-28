@@ -5,7 +5,7 @@ import ProjectCard from "./ProjectCard";
 import { projects } from "./projects";
 
 
-const PROJECTS_PER_PAGE = 2;
+const PROJECTS_PER_PAGE = 5;
 
 export default function ProjectsSection() {
     const [page, setPage] = useState(0);

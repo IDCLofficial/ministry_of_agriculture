@@ -3,11 +3,11 @@ import { MVSCard } from "./MVSCard"
 const mvs = [
     {
         title: "Our Mission",
-        description: "To develop, promote, and sustain a vibrant tourism and cultural industry in Imo State."
+        description: "To promote sustainable agricultural development through innovation, farmer empowerment, and agribusiness support, ensuring food security, economic growth, and improved livelihoods for all citizens of Imo State."
     },
     {
         title: "Our Vision",
-        description: "To establish Imo State as a premier tourism destination in Nigeria, renowned for its rich cultural heritage, dynamic creative sector, and world-class hospitality, thereby attracting both local and international visitors while enhancing the state’s global image."
+        description: "To build a vibrant, modern, and sustainable agricultural sector that ensures food sufficiency, drives economic prosperity, and positions Imo State as a leading hub for agribusiness and rural development in Nigeria."
     }
 ]   
 

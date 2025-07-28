@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Tourism, Creative Arts and Culture",
-    description: "The Imo State Ministry of Tourism, Creative Arts, and Culture is a government agency responsible for promoting tourism, preserving cultural heritage, and fostering creative arts in Imo State, Nigeria. The ministry plays a key role in developing tourist attractions, organizing cultural events, and boosting the state’s economy through tourism.",
+    ministry: "Agriculture",
+    description: "The Ministry of Agriculture and Food Security in Imo State was established to spearhead agricultural development and rural transformation. Since its creation in the early years of the state’s formation in 1976, the ministry has evolved through reforms, focusing on food production, agro-industrial growth, farmer support, and policy-driven agricultural transformation across the state.",
     quickLinks: [
         {
             label: "Projects",
@@ -43,15 +43,15 @@ const info = {
     ],
     contact: [
         {
-            label: "+0803 092 5349",
+            label: "+234 812 345 6789",
             href: "/"
         },
         {
-            label: "imotcac@yahoo.com",
+            label: "agriculture@imostate.gov.ng",
             href: "/"
         },  
         {
-            label: "Block 8 Ministry of Tourism, Creative Arts and culture, Imo State Secretariat, along Port Harcourt road, Owerri Owerri, Nigeria 460271",
+            label: "Ministry Address: Block 4, State Secretariat Complex, Owerri, Imo State.",
             href: "/"
         },
     ]

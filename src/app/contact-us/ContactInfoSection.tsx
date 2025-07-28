@@ -2,9 +2,9 @@ import React from "react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const contactInfo = {
-  address: "Block 8 Ministry of Tourism, Creative Arts and culture, Imo State Secretariat, along Port Harcourt road, Owerri Owerri, Nigeria 460271.",
-  email: "imotcac@yahoo.com",
-  phone: "0803 092 5349",
+  address: "Ministry Address: Block 4, State Secretariat Complex, Owerri, Imo State.",
+  email: "agriculture@imostate.gov.ng",
+  phone: "+234 812 345 6789",
   socials: [
     { icon: <FaFacebookF />, href: "https://www.facebook.com/Imotcac/" },
     { icon: <FaTwitter />, href: "#" },
@@ -15,7 +15,7 @@ const contactInfo = {
 
 const ContactInfoSection = () => (
   <div className="mb-8 md:mb-0">
-    <p className="mb-4 text-[#151A21] text-[1rem]">Have questions, proposals, or feedback? We&apos;re here to support you. Reach out through any of the channels below.</p>
+    <p className="mb-4 text-[#151A21] text-[1rem]">We welcome your questions, suggestions, or partnership inquiries</p>
     <h2 className="text-xl font-bold mb-2">Contact Us</h2>
     <ul className="space-y-2 mb-4">
       <li className="flex items-start gap-2 text-[#151A21]"><FaMapMarkerAlt className="mt-1 text-xl" /> <span>{contactInfo.address}</span></li>
