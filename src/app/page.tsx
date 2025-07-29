@@ -14,7 +14,7 @@ export default function Home() {
       <Hero
         title="Imo State Ministry of Agriculture" 
         caption="Feeding Imo, Empowering Farmers" 
-        subtitle="Driving agricultural innovation and food security through inclusive, sustainable practices."
+        subtitle="Our mission is to promote sustainable agricultural development through innovation, farmer empowerment, and agribusiness support, ensuring food security, economic growth, and improved livelihoods for all citizens of Imo State."
       />
       <AboutSection 
         title="About Us"
