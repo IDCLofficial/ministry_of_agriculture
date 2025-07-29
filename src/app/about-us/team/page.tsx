@@ -32,7 +32,7 @@ export default function TeamPage() {
         heading="Leadership Behind the Ministry of Agriculture"
       />
       <CommissionerSection
-        imgSrc="/images/commissioners.jpg"
+        imgSrc="/images/user.png"
         heading="Background and Vision"
         description={commissionerDescription}
       />

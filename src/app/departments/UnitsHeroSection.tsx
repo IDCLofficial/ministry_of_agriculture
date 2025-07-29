@@ -6,8 +6,10 @@ import { motion } from "framer-motion";
 export default function UnitsHeroSection() {
   return (
     <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
-      <div className="relative z-10 flex flex-col items-center justify-center h-full">
+      <div className="relative z-10 flex justify-center">
         <Title label="Departments" />
+      </div>
+      <div className="relative z-10 flex justify-center">
         <motion.h1
           className="text-white text-3xl md:text-5xl font-bold text-center leading-tight py-2"
           initial={{ opacity: 1 }}

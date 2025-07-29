@@ -28,12 +28,14 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
               <Image src={image1} alt="Mandate 1" fill className="object-cover" />
             </div>
               </PageTransition>
-            <div className="w-full md:w-auto">
+            <div className="w-full md:w-auto flex flex-col gap-4">
               <PageTransition type="fadeUp">
                 <p className="text-gray-200 text-[1rem] md:text-[16px] max-w-lg text-justify">
                     {subtitle}
                 </p>
               </PageTransition>
+              <AppLink href="/about-us" label="Learn More" variant="secondary" className="border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
+        font-medium hover:bg-primary-green hover:text-white transition-all duration-300 w-max hidden md:block"/>
             </div>
         </div>
         {/* Right: Images */}
@@ -46,8 +48,8 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
           </div>
         </div>
 
-        <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
-        font-medium hover:bg-primary-green hover:text-white transition-all duration-300"/>
+        <AppLink href="/about-us" label="Learn More" variant="secondary" className="border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] 
+        font-medium hover:bg-primary-green hover:text-white transition-all duration-300 md:hidden"/>
       </div>
     </section>
   );

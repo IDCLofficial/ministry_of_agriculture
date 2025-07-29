@@ -23,7 +23,7 @@ export default function Home() {
         image2="/images/agriculture2.jpg"
       />
       <AboutCommisioner 
-        imgSrc="/images/commissioner.jpg" 
+        imgSrc="/images/user.png" 
         title="About The Commissioner" 
       />
       <section className="w-full flex flex-col gap-4">

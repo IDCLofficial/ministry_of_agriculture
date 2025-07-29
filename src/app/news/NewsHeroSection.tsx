@@ -3,6 +3,8 @@ import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import newsList from "./newsList";
 import Link from "next/link";
+import { SubsequentHero } from "../components/Hero";
+import { Title } from "../components/Title";
 
 export default function NewsHeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -31,14 +33,15 @@ export default function NewsHeroSection() {
   };
 
   return (
-    <section className="relative w-full h-[350px] md:h-[400px] flex items-center justify-center bg-[url('/images/projectsHero.png')] bg-cover bg-center">
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-0"></div>
-      <div className="relative z-10 flex flex-col items-center justify-center gap-2 w-full h-full px-4 md:px-0">
+    <SubsequentHero className="bg-[url('/images/projectsHero.png')] bg-cover bg-center">
+      <div className="relative z-10 flex justify-center">
+        <Title label="News" />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-0">
         <h1 className="text-white text-3xl md:text-[3rem] md:text-5xl font-bold text-center leading-tight">
           Budgeting for Imo’s Growth
         </h1>
-        <div className="w-full mt-2 flex flex-col items-center justify-center relative max-w-xl mx-auto">
+        <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">
           <div className="w-full relative">
             <SearchBar placeholder="Search" value={searchQuery} onChange={handleChange} onSearch={handleSearch} />
             {showDropdown && (
@@ -58,6 +61,6 @@ export default function NewsHeroSection() {
           </div>
         </div>
       </div>
-    </section>
+    </SubsequentHero>
   );
 } 

@@ -7,8 +7,10 @@ import { Title } from "../components/Title";
 export default function ProjectHeroSection() {
   return (
     <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
-      <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+      <div className="relative z-10 flex justify-center">
         <Title label="Projects" />
+      </div>
+      <div className="relative z-10 flex justify-center">
         <motion.h1
           className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4"
           initial={{ opacity: 1 }}

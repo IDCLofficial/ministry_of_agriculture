@@ -2,12 +2,15 @@
 
 import { motion } from "framer-motion";
 import { Title } from "../components/Title";
+import { SubsequentHero } from "../components/Hero";
 
 export default function EventsHeroSection() {
   return (
-    <section className="relative w-full h-[400px] flex items-center justify-center bg-[url('/images/gradient.png')] bg-cover bg-center">
-      <div className="flex flex-col items-center justify-center">
+    <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
+      <div className="relative z-10 flex justify-center">
         <Title label="Events" />
+      </div>
+      <div className="relative z-10 flex justify-center">
         <motion.h1
           className="text-white text-4xl md:text-5xl font-bold text-center"
           initial={{ opacity: 1 }}
@@ -41,6 +44,6 @@ export default function EventsHeroSection() {
           ))}
         </motion.h1>
       </div>
-    </section>
+    </SubsequentHero>
   );
 } 

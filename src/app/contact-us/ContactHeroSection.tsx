@@ -10,8 +10,10 @@ interface ContactHeroSectionProps {
 
 const ContactHeroSection: React.FC<ContactHeroSectionProps> = ({ title }) => (
   <SubsequentHero className="bg-[url('/images/gradient.png')] bg-cover bg-center">
-    <div className="relative z-10 flex flex-col items-center justify-center w-full h-full">
+    <div className="relative z-10 flex justify-center">
       <Title label="Contact Us" />
+    </div>
+    <div className="relative z-10 flex justify-center">
       <motion.h1
         className="text-white text-4xl md:text-5xl font-bold z-10"
         initial={{ opacity: 1 }}
