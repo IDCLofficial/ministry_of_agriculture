@@ -19,8 +19,8 @@ export default function NewsHeroSection() {
       setShowDropdown(false);
       return;
     }
-    const filtered = newsList.filter(item =>
-      item.title.toLowerCase().includes(value.toLowerCase())
+    const filtered = newsList?.filter(item =>
+      item?.title.toLowerCase().includes(value.toLowerCase())
     );
     setResults(filtered);
     setShowDropdown(true);
@@ -39,7 +39,7 @@ export default function NewsHeroSection() {
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-0">
         <h1 className="text-white text-3xl md:text-[3rem] md:text-5xl font-bold text-center leading-tight">
-          Budgeting for Imo’s Growth
+          Stay Up to Date
         </h1>
         <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">
           <div className="w-full relative">

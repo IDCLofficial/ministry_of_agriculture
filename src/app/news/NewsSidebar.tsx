@@ -4,10 +4,10 @@ import { BiChevronDown } from "react-icons/bi";
 import newsList from "./newsList";
 
 const categories = [
-  { name: "Latest Updates", count: 12 },
-  { name: "Policies", count: 12 },
-  { name: "Latest Updates", count: 12 },
-  { name: "Latest Updates", count: 12 },
+  { name: "Latest Updates", count: 0 },
+  { name: "Policies", count: 0 },
+  { name: "Latest Updates", count: 0 },
+  { name: "Latest Updates", count: 0 },
 ];
 
 const popularNews = newsList.slice(0, 3).map(({ title, date, img }) => ({ title, date, img }));

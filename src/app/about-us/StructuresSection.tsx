@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Tree, TreeNode } from "react-organizational-chart";
 import { departments } from "../departments/departments";
+import { AppLink } from "../components/AppLink";
 
 interface StructuresSectionProps {
     imgSrc: string;
@@ -57,6 +58,7 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                             </div>
                         ))}
                     </div>
+                    <AppLink href="/departments" label="Learn More" variant="primary" className="w-max mx-auto mt-4 hover:bg-primary-green/80 transition-all duration-300"/>
 
                     {/* <div className="flex flex-col md:flex-row w-full gap-2">
                         {departments.row2.map((department, index) => (
