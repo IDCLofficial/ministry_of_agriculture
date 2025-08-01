@@ -18,7 +18,7 @@ export default function Home() {
       />
       <AboutSection 
         title="About Us"
-        subtitle="The Ministry of Agriculture and Food Security in Imo State was established to spearhead agricultural development and rural transformation. Since its creation in the early years of the state’s formation in 1976, the ministry has evolved through reforms, focusing on food production, agro-industrial growth, farmer support, and policy-driven agricultural transformation across the state."
+        subtitle="On behalf of the Ministry of Agriculture and Food Security, Imo State, I warmly welcome you and appreciate your continued interest in the agricultural transformation of our dear state. Our mission is to achieve food sufficiency, enhance rural livelihoods, and empower our farmers through innovation, capacity building, and access to critical support services. We are committed to revitalizing the agricultural sector by strengthening value chains, promoting agribusiness, and encouraging youth participation in farming and agro-processing. By fostering public-private partnerships, ensuring access to finance, and embracing modern technologies, we aim to boost productivity, reduce poverty, and contribute significantly to the economic growth of Imo State. We believe that with collective commitment and shared responsibility, we can build a sustainable, food-secure future for all. Thank you for supporting our vision of agricultural excellence and rural prosperity."
         image1="/images/agriculture.jpg"
         image2="/images/agriculture2.jpg"
       />
