@@ -10,12 +10,6 @@ export const teamMembers = [
         position: "Permanent Secretary",
         imgSrc: "/images/permSec.jpeg",
         alt: "permanent secretary" // Use a placeholder or real image if available
-    },
-    {
-        name: "No information",
-        position: "PRO",
-        imgSrc: "",
-        alt: "PRO" // Use a placeholder or real image if available
-    },
+    }
     
 ]
