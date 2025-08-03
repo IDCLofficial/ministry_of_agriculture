@@ -38,7 +38,7 @@ export default function NewsHeroSection() {
         <Title label="News" />
       </div>
       <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4 md:px-0">
-        <h1 className="text-white text-3xl md:text-[3rem] md:text-5xl font-bold text-center leading-tight">
+        <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center leading-tight">
           Stay Up to Date
         </h1>
         <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">

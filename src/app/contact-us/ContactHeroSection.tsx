@@ -15,7 +15,7 @@ const ContactHeroSection: React.FC<ContactHeroSectionProps> = ({ title }) => (
     </div>
     <div className="relative z-10 flex justify-center">
       <motion.h1
-        className="text-white text-4xl md:text-5xl font-bold z-10"
+        className="text-white text-3xl lg:text-5xl font-bold z-10"
         initial={{ opacity: 1 }}
         animate={{}}
       >

@@ -59,7 +59,7 @@ export const Hero = ({title, caption, subtitle}: HeroProps) => {
                 <div className="w-full md:w-[60%] flex flex-col gap-2 pt-[1rem]">
                     <PageTransition type="fadeUp">
                         <Title label={title}/>
-                        <h1 className="text-[2rem] md:text-[3rem] font-bold text-white leading-tight py-2">{caption}</h1>
+                        <h1 className="text-[2rem] lg:text-[3rem] font-bold text-white leading-tight py-2">{caption}</h1>
                         <p className="text-[1rem] leading-[1.5] text-white">
                             {subtitle}
                         </p>

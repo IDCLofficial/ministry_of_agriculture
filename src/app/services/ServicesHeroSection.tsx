@@ -11,8 +11,8 @@ export default function ServicesHeroSection() {
             <div className="relative z-10 flex justify-center">
                 <Title label="Services" />
             </div>
-            <div className="relative z-10 flex justify-center mt-4">
-                <div className="w-full md:w-[60%] flex flex-col items-center text-center">
+            <div className="relative z-10 flex justify-center">
+                <div className="w-full lg:w-[60%] flex flex-col items-center text-center">
                     <motion.h1
                         className="text-2xl md:text-[3rem] font-bold text-white leading-tight"
                         initial={{ opacity: 1 }}
