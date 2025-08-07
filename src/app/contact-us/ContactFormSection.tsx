@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 const ContactFormSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -10,7 +12,19 @@ const ContactFormSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // handle form submission (e.g., send to API)
+    setLoading(true);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setLoading(false);
+      setSuccess(true);
+      setForm({ name: "", email: "", message: "" });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setSuccess(false);
+      }, 5000);
+    }, 1500);
   };
 
   return (
@@ -46,10 +60,16 @@ const ContactFormSection = () => {
         />
         <button
           type="submit"
-          className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium mt-2 cursor-pointer"
+          disabled={loading}
+          className={`w-full py-2 rounded font-medium mt-2 cursor-pointer ${loading ? 'bg-green-400' : 'bg-green-600 hover:bg-green-700'} text-white`}
         >
-          Submit
+          {loading ? 'Sending...' : 'Submit'}
         </button>
+        {success && (
+          <div className="text-green-400 text-center py-2">
+            Message sent successfully! We'll get back to you soon.
+          </div>
+        )}
       </form>
     </div>
   );

@@ -1,5 +1,8 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 const info = {
     logo: "/logo.png",
@@ -58,6 +61,27 @@ const info = {
 }
 
 export default function Footer() {
+    const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [success, setSuccess] = useState(false);
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setLoading(true);
+        
+        // Simulate API call
+        setTimeout(() => {
+            setLoading(false);
+            setSuccess(true);
+            setEmail("");
+            
+            // Reset success message after 5 seconds
+            setTimeout(() => {
+                setSuccess(false);
+            }, 5000);
+        }, 1500);
+    };
+
     return (
         <footer className="w-full bg-white pt-10 px-4 lg:px-18">
             <div className="mx-auto px-4 flex flex-col md:flex-row justify-between gap-8 pb-8">
@@ -86,14 +110,29 @@ export default function Footer() {
                 {/* Newsletter and Contact */}
                 <div className="flex-1">
                 <h4 className="font-semibold text-gray-900 mb-3">{info.newsletter[0].label}</h4>
-                <form className="flex mb-3">
+                <form className="flex mb-3" onSubmit={handleSubmit}>
                     <input
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Myemail@gmail.com"
                     className="border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                    required
+                    disabled={loading}
                     />
-                    <button type="submit" className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-r text-sm font-medium">{info.newsletter[1].label}</button>
+                    <button 
+                        type="submit" 
+                        className={`px-4 py-2 rounded-r text-sm font-medium text-white ${loading ? 'bg-green-400' : 'bg-green-600 hover:bg-green-700'}`}
+                        disabled={loading}
+                    >
+                        {loading ? 'Subscribing...' : info.newsletter[1].label}
+                    </button>
                 </form>
+                {success && (
+                    <div className="text-green-600 text-xs mb-3">
+                        Thank you for subscribing to our newsletter!
+                    </div>
+                )}
                 <div className="text-xs text-gray-700 space-y-1 flex flex-col">
                     {info.contact.map((item) => (
                         <Link href={item.href} key={item.label}>{item.label}</Link>
