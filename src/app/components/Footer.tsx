@@ -8,7 +8,7 @@ const info = {
     quickLinks: [
         {
             label: "Projects",
-            href: "/" 
+            href: "/projects" 
         },
         {
             label: "News",

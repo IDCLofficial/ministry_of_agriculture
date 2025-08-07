@@ -2,7 +2,7 @@ export const teamMembers = [
     {
         name: "Honourable Chief Cosmas Nwabueze Maduba",
         position: "Commissioner",
-        imgSrc: "",
+        imgSrc: "/images/commissioner.jpg",
         alt: "commissioner" // Use a placeholder or real image if available
     },
     {
