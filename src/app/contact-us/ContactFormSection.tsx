@@ -67,7 +67,7 @@ const ContactFormSection = () => {
         </button>
         {success && (
           <div className="text-green-400 text-center py-2">
-            Message sent successfully! We'll get back to you soon.
+            Message sent successfully! We&apos;ll get back to you soon.
           </div>
         )}
       </form>

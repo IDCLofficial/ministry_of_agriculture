@@ -49,7 +49,9 @@ export default function QuickLinks() {
         className="w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-0 md:px-4"
       >
         {links.map((link) => (
-            <Link href={link.href} 
+            <Link 
+              key={link.title}
+              href={link.href} 
               className="flex-1 flex flex-col justify-between relative p-4 md:p-6 bg-white
             w-[90%] h-[120px] md:h-[180px] mx-auto border border-gray-200 shadow-md hover:scale-105 transition-all duration-300">
               <div>
