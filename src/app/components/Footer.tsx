@@ -18,8 +18,8 @@ const info = {
             href: "/news"
         },
         {
-            label: "Units",     
-            href: "/units"
+            label: "Departments",     
+            href: "/departments"
         },
         {
             label: "Events",
