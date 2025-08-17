@@ -10,7 +10,7 @@ interface ProjectCardProps {
   }[];
 }
 
-export default function ProjectCard({ title, description, image, sponsors }: ProjectCardProps) {
+export default function ProjectCard({ title, description, image, sponsors }: ProjectCardProps ) {
   return (  
     <section className="w-full py-10 md:py-16 bg-white flex flex-col md:flex-row md:items-center gap-8 md:gap-22 px-4 md:px-20">
       <div className="w-full relative rounded-lg overflow-hidden md:hidden"> 

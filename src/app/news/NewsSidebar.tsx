@@ -1,18 +1,37 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
-import newsList from "./newsList";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
-const categories = [
-  { name: "Latest Updates", count: 0 },
-  { name: "Policies", count: 0 },
-  { name: "Latest Updates", count: 0 },
-  { name: "Latest Updates", count: 0 },
-];
+type Category = { key: string; name: string; count: number };
+type Popular = {
+  title: string;
+  img?: string;
+  badge: { fields: { category_name: string } };
+  desc: unknown;
+};
 
-const popularNews = newsList.slice(0, 3).map(({ title, date, img }) => ({ title, date, img }));
+export default function NewsSidebar({
+  categories,
+  popularNews,
+  selectedFilter,
+}: {
+  categories: Category[];
+  popularNews: Popular[];
+  selectedFilter: string;
+}) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
 
-export default function NewsSidebar() {
+  const setFilter = (key: string) => {
+    const params = new URLSearchParams(Array.from(searchParams.entries()));
+    params.set("filter", key);
+    router.push(`${pathname}?${params.toString()}`, { scroll: false });
+  };
+
   return (
     <aside className="w-full md:w-64 flex-shrink-0 bg-[#F9F9F9] p-2 md:p-4 mb-8 md:mb-0">
       <div className="md:hidden">
@@ -21,21 +40,36 @@ export default function NewsSidebar() {
           <BiChevronDown className="text-gray-500 text-[18px] cursor-pointer" />
         </div>
         <div className="flex flex-col gap-2 mt-4" id="dropdown">
-          {categories.map((cat, idx) => (
-            <div key={idx} className="w-full flex gap-2 md:gap-3 items-center">
+          {categories.map((cat) => (
+            <button
+              key={cat.key}
+              onClick={() => setFilter(cat.key)}
+              className={`w-full flex justify-between items-center text-left text-gray-700 text-xs md:text-[15px] px-1 py-1 rounded ${
+                selectedFilter === cat.key ? "bg-white" : "hover:bg-white/70"
+              }`}
+              aria-pressed={selectedFilter === cat.key}
+            >
               <span>{cat.name}</span>
-              {/* <span>{cat.count}</span> */}
-            </div>
+              <span>{cat.count}</span>
+            </button>
           ))}
         </div>
       </div>
       <div className="mb-6 md:mb-8 max-md:hidden">
         <h3 className="font-medium text-base md:text-[18px] mb-2 md:mb-4">CATEGORIES</h3>
         <ul className="space-y-1 md:space-y-2">
-          {categories.map((cat, idx) => (
-            <li key={idx} className="flex justify-between text-gray-700 text-xs md:text-[15px]">
-              <span>{cat.name}</span>
-              <span>{cat.count}</span>
+          {categories.map((cat) => (
+            <li key={cat.key} className="flex justify-between text-gray-700 text-xs md:text-[15px]">
+              <button
+                onClick={() => setFilter(cat.key)}
+                className={`flex justify-between w-full text-left px-1 py-1 rounded ${
+                  selectedFilter === cat.key ? "bg-white font-medium" : "hover:bg-white/70"
+                }`}
+                aria-pressed={selectedFilter === cat.key}
+              >
+                <span>{cat.name}</span>
+                <span>{cat.count}</span>
+              </button>
             </li>
           ))}
         </ul>
@@ -47,11 +81,11 @@ export default function NewsSidebar() {
             <li key={idx} className="flex gap-2 md:gap-3 items-center">
               <Link href={`/news/${news.title}`} className="flex gap-2 md:gap-3 items-center">
                 <div className="w-[50px] h-[50px] relative rounded overflow-hidden flex-shrink-0">
-                  <Image src={news.img} alt={news.title} width={100} height={100} className="object-cover w-full h-full" />
+                  <Image src={`https:${news.img}` || ""} alt={news.title} width={100} height={100} className="object-cover w-full h-full" />
                 </div>
                 <div>
-                <div className="text-xs md:text-[14px] font-medium leading-tight line-clamp-2">{news.title}</div>
-                  <div className="text-[10px] text-gray-500 mt-1">{news.date}</div>
+                  <div className="text-xs md:text-[14px] font-medium leading-tight line-clamp-2">{news.title}</div>
+                  <div className="text-[10px] text-gray-500 mt-1">{news.badge.fields.category_name}</div>
                 </div>
               </Link>
             </li>
@@ -60,4 +94,4 @@ export default function NewsSidebar() {
       </div>
     </aside>
   );
-} 
+}

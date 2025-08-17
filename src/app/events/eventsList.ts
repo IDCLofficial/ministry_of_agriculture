@@ -1,21 +1,6 @@
-type event = {
-  slug: string,
-  date: string,
-  location: string,
-  title: string,
-  description: string,
-  img: string,
-  time: string,
-  organizer: string,
-  phone: string,
-  address: string,
-  speakers?: [{
-    name: string,
-    img: string,
-    role: string
-  }]
+import { contentfulService } from "../../../lib/contentful";
+
+export default async function getEvents() {
+    const events = await contentfulService.getEventsByMinistryId(process.env.NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID!)
+    return events;
 }
-
-const events: event[] = [];
-
-export default events; 

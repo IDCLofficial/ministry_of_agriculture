@@ -1,12 +1,12 @@
 "use client"
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
-import newsList from "./newsList";
 import Link from "next/link";
 import { SubsequentHero } from "../components/Hero";
 import { Title } from "../components/Title";
+import { NewsPost } from "../../../lib/types";
 
-export default function NewsHeroSection() {
+export default function NewsHeroSection({newsList}: {newsList: NewsPost[]}) {
   const [searchQuery, setSearchQuery] = useState("");
   const [results, setResults] = useState<{ title: string; date: string } []>([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -19,10 +19,10 @@ export default function NewsHeroSection() {
       setShowDropdown(false);
       return;
     }
-    const filtered = newsList?.filter(item =>
-      item?.title.toLowerCase().includes(value.toLowerCase())
+    const filtered: NewsPost[] = newsList?.filter(item =>
+      item?.fields.title.toLowerCase().includes(value.toLowerCase())
     );
-    setResults(filtered);
+    setResults(filtered.map(item => ({ title: item?.fields.title, date: item?.sys.createdAt })));
     setShowDropdown(true);
   };
 

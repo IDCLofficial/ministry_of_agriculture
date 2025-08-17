@@ -7,8 +7,11 @@ import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import FeaturedPartners from "./components/FeaturedPartners";
+import { getProject } from "./projects/projects";
+import { Project } from "../../lib/types";
 
-export default function Home() {
+export default async function Home() {
+  const projectList = await getProject();
   return (
     <div className="h-screen w-full bg-red-400">
       <Hero
@@ -27,7 +30,7 @@ export default function Home() {
         title="About The Commissioner" 
       />
       <section className="w-full flex flex-col gap-4">
-        <FeaturedInitiatives />
+      <FeaturedInitiatives initiatives = {projectList as unknown as Project[]}/>
         <FeaturedPartners />
         <QuickLinks />
         {/* <Advertisement /> */}

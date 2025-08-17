@@ -1,9 +1,9 @@
 "use client"
 
 import React, { useRef } from "react";
-import events from "./eventsList";
 import Image from "next/image";
 import Link from "next/link";
+import { Events } from "../../../lib/types";
 
 function isPastEvent(eventDateStr: string) {
     // Try to parse date (optionally with time)
@@ -15,7 +15,7 @@ function isPastEvent(eventDateStr: string) {
     return false;
 }
 
-export default function PastEvents() {
+export default function PastEvents({events}: {events: Events[]}) {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     const scroll = (direction: "left" | "right") => {
@@ -32,8 +32,7 @@ export default function PastEvents() {
     // Filter only past events
     const pastEvents = events.filter(event => {
         // If event has a time, combine it
-        let dateStr = event.date;
-        if (event.time) dateStr = `${event.date} ${event.time}`;
+        const dateStr = event.fields.eventDate;
         return isPastEvent(dateStr);
 
     });
@@ -56,15 +55,15 @@ export default function PastEvents() {
                     {pastEvents.length === 0 ? (
                         <div className="text-center text-gray-500 py-12 text-lg">No past events at this time.</div>
                     ) : pastEvents.map((event) => (
-                        <div key={event.slug} className="flex-shrink-0 w-80 bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col p-4">
+                        <div key={event.sys.id} className="flex-shrink-0 w-80 bg-white rounded-xl border border-gray-200 shadow-sm flex flex-col p-4">
                             <div className="relative w-full h-40 mb-4 rounded overflow-hidden">
-                                <Image src={event.img} alt={event.title} fill className="object-cover rounded" />
+                                <Image src={`https:${event.fields.bannerImage?.fields.file.url}`} alt={event.fields.eventName} fill className="object-cover rounded" />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-xs text-gray-500 mb-1">{event.date} | {event.location}</span>
-                                <h3 className="text-lg font-semibold mb-1">{event.title}</h3>
-                                <p className="text-sm text-gray-700 mb-2">{event.description}</p>
-                                <Link href={`/events/${event.slug}`} className="w-max border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition mt-2">More Information</Link>
+                                <span className="text-xs text-gray-500 mb-1">{event.fields.eventDate} | {event.fields.location}</span>
+                                <h3 className="text-lg font-semibold mb-1">{event.fields.eventName}</h3>
+                                <p className="text-sm text-gray-700 mb-2">{event.fields.briefDescription}</p>
+                                <Link href={`/events/${event.fields.eventName}`} className="w-max border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition mt-2">More Information</Link>
                             </div>
                         </div>
                     ))}

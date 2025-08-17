@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import events from "./eventsList";
+import { Events } from "../../../lib/types";
 
 function isUpcomingEvent(eventDateStr: string) {
   // Try to parse date (optionally with time)
@@ -17,11 +17,11 @@ function isUpcomingEvent(eventDateStr: string) {
   return false;
 }
 
-export default function EventsListSection() {
+export default function EventsListSection({events}: {events: Events[]}) {
   // Filter only upcoming events (today or later)
   const upcomingEvents = events.filter(event => {
-    let dateStr = event.date;
-    if (event.time) dateStr = `${event.date} ${event.time}`;
+    let dateStr = event.fields.eventDate;
+    if (event.fields.eventDate) dateStr = `${event.fields.eventDate}`;
     return isUpcomingEvent(dateStr);
   });
 
@@ -35,19 +35,19 @@ export default function EventsListSection() {
           {upcomingEvents.map((event, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center border-b border-b-[#C8C8C8] pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
-                <Image src={event.img} alt={event.title} fill className="object-cover" />
+                <Image src={`https:${event.fields.bannerImage?.fields.file.url}`} alt={event.fields.eventName} fill className="object-cover" />
               </div>
               <div className="flex-1 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
                 <div className="flex-1">
                   <div className="flex flex-row items-center gap-4 md:gap-10 text-gray-500 text-xs mb-1">
-                    <span>{event.date}</span>
-                    <span>{event.location}</span>
+                    <span>{event.fields.eventDate}</span>
+                    <span>{event.fields.location}</span>
                   </div>
-                  <h3 className="text-xl font-medium mb-1">{event.title}</h3>
-                  <p className="text-dark-primary-body text-base mb-2">{event.description}</p>
+                  <h3 className="text-xl font-medium mb-1">{event.fields.eventName}</h3>
+                  <p className="text-dark-primary-body text-base mb-2">{event.fields.briefDescription}</p>
                 </div>
                 <div className="flex justify-end md:justify-center">
-                  <Link href={`/events/${event.slug}`} className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</Link>
+                  <Link href={`/events/${event.fields.eventName}`} className="border border-primary-green text-primary-green text-[14px] px-4 py-2 rounded font-semibold hover:bg-green-50 transition">More Information</Link>
                 </div>
               </div>
             </div>

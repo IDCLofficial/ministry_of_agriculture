@@ -53,12 +53,6 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle }) 
             </span>
           ))}
         </motion.h1>
-        <SearchBar
-          placeholder="Search"
-          value=""
-          onChange={() => {}}
-          onSearch={() => {}}
-        />
       </div>
     </SubsequentHero>
   );

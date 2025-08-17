@@ -4,7 +4,7 @@ import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
 import CTASection from "@/app/components/CTASection";
 import SocialShareBar from "../SocialShareBar";
-import newsList from "../newsList";
+import { getNewsList } from "../newsList";
 
 function slugify(title: string): string {
   return title
@@ -14,12 +14,15 @@ function slugify(title: string): string {
 }
 
 export async function generateStaticParams() {
-  return newsList.map(news => ({ slug: slugify(news.title) }));
+  const newsList = await getNewsList();
+  return newsList.map(news => ({ slug: slugify(news.fields.title) }));
 }
 
+
 export default async function NewsDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const newsList = await getNewsList();
   const { slug } = await params;
-  const news = newsList.find(item => slugify(item.title) === slug);
+  const news = newsList.find(item => item.fields.title === decodeURIComponent(slug));
 
   if (!news) {
     return (
@@ -30,7 +33,7 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
   }
 
   // Get other news for latestNews section (excluding current)
-  const latestNews = newsList.filter(item => item.title !== news.title).slice(0, 3);
+  const latestNews = newsList.filter(item => item.fields.title !== news.fields.title).slice(0, 3);
 
   return (
     <div className="min-h-screen bg-[#F7F9FA]">
@@ -41,16 +44,16 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
           {/* Title & Meta */}
           <div className="relative z-10 w-full flex justify-center pb-2">
             <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-lg">
-              <Image src={news.img} alt={news.title} width={900} height={400} className="object-cover w-full h-[260px] md:h-[320px]" />
+              <Image src={`https:${String(news.fields.featuredImage?.fields.file.url)}`} alt={news.fields.title} width={900} height={400} className="object-cover w-full h-[260px] md:h-[320px]" />
             </div>
           </div>
           <div className="text-center">
-            <h1 className="text-2xl md:text-3xl font-bold mb-2">{news.title}</h1>
-            <SocialShareBar date={news.date} />
+            <h1 className="text-2xl md:text-3xl font-bold mb-2">{news.fields.title}</h1>
+            <SocialShareBar date={news.sys.createdAt} />
           </div>
           {/* Main Content */}
           <div>
-            <p className="text-gray-700 mb-6">{news.desc}</p>
+            <p className="text-gray-700 mb-6">{news.fields.fullNews}</p>
             {/* You can add more fields or sections here if needed */}
           </div>
         </NewsBodySection>
@@ -63,11 +66,11 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
             {latestNews.map((item, idx) => (
               <div key={idx} className="bg-[#232323] rounded-xl overflow-hidden flex-1 min-w-[220px] max-w-xs">
                 <div className="relative w-full h-28">
-                  <Image src={item.img} alt={item.title} fill className="object-cover" />
+                  <Image src={`https:${String(item.fields.featuredImage?.fields.file.url)}`} alt={item.fields.title} fill className="object-cover" />
                 </div>
                 <div className="p-4">
-                  <div className="text-white text-xs font-semibold mb-2 line-clamp-2">{item.title}</div>
-                  <div className="text-gray-400 text-[10px]">{item.date}</div>
+                  <div className="text-white text-xs font-semibold mb-2 line-clamp-2">{item.fields.title}</div>
+                  <div className="text-gray-400 text-[10px]">{item.sys.createdAt}</div>
                 </div>
               </div>
             ))}
@@ -75,7 +78,12 @@ export default async function NewsDetailPage({ params }: { params: Promise<{ slu
         </div>
       </div>
       {/* Section 3: Footer */}
-      <CTASection heading="Ready to Experience the New Imo?" subtext="Discover our vision for an inclusive, empowered, and connected state." buttonLabel="Contact Us" buttonHref="/contact-us"/>
+      <CTASection 
+        heading="Join us in pioneering a tech-driven future for Imo State."
+        subtext="Together, we can foster innovation, empower youth with digital skills, promote research and development, and build smart, sustainable solutions that transform communities and fuel economic growth."
+        buttonLabel="Contact Us" 
+        buttonHref="/contact-us"
+      />
       <Footer />
     </div>
   );
