@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ministry-of-agriculture
+    env: node
+    plan: starter
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: 18
+    healthCheckPath: /
+    autoDeploy: true
+    branch: main
