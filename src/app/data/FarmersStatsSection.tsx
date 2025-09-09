@@ -10,7 +10,8 @@ export const FarmersStatsSection: React.FC<FarmersStatsSectionProps> = ({ data, 
   // Calculate total farm size - ensure we're working with numbers
   const totalFarmSize = data.reduce((sum, farmer) => {
     const farmSize = farmer['SIZE OF FARM'];
-    const numericSize = typeof farmSize === 'string' ? parseFloat(farmSize) || 0 : farmSize || 0;
+    console.log(farmSize)
+    const numericSize = typeof farmSize === 'number' ? farmSize : parseFloat(farmSize) || 0;
     return sum + numericSize;
   }, 0);
   
