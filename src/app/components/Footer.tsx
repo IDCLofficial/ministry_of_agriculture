@@ -14,6 +14,10 @@ const info = {
             href: "/projects" 
         },
         {
+            label: "Data",
+            href: "/data" 
+        },
+        {
             label: "News",
             href: "/news"
         },
