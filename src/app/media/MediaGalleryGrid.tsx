@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import MediaGalleryCard from "./MediaGalleryCard";
 import { Media } from "../../../lib/types";
 import SearchBar from "../components/SearchBar";
+import Image from "next/image";
 
 interface MediaGalleryGridProps {
   items: Media[];
@@ -98,7 +99,7 @@ const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }) => {
               ✕
             </button>
             {/* Image */}
-            <img
+            <Image
               src={viewer.src}
               alt={viewer.title}
               className="max-h-[80vh] max-w-full object-contain bg-black"

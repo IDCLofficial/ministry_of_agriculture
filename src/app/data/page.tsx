@@ -5,6 +5,7 @@ import { FarmersHeroSection } from './FarmersHeroSection';
 import { FarmersStatsSection } from './FarmersStatsSection';
 import { FarmersTableSection } from './FarmersTableSection';
 import { FarmersSearchSection } from './FarmersSearchSection';
+import Chatbot from '../components/Chatbot';
 
 import { Farmer } from './types';
 
@@ -113,38 +114,41 @@ export default function FarmersPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <FarmersHeroSection 
-        totalFarmers={data.length} 
-        filteredFarmers={filteredData.length} 
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <FarmersSearchSection 
-          searchTerm={searchTerm}
-          setSearchTerm={setSearchTerm}
-          selectedCrop={selectedCrop}
-          setSelectedCrop={setSelectedCrop}
-          selectedLGA={selectedLGA}
-          setSelectedLGA={setSelectedLGA}
-          uniqueCrops={uniqueCrops}
-          uniqueLGAs={uniqueLGAs}
+    <>
+      <Chatbot />
+      <div className="min-h-screen bg-gray-50">
+        <FarmersHeroSection 
+          totalFarmers={data.length} 
+          filteredFarmers={filteredData.length} 
         />
         
-        <FarmersStatsSection 
-          data={filteredData}
-          totalFarmers={filteredData.length}
-        />
-        
-        <FarmersTableSection 
-          currentItems={currentItems}
-          currentPage={currentPage}
-          itemsPerPage={itemsPerPage}
-          totalPages={totalPages}
-          paginate={paginate}
-          totalFarmers={filteredData.length}
-        />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          <FarmersSearchSection 
+            searchTerm={searchTerm}
+            setSearchTerm={setSearchTerm}
+            selectedCrop={selectedCrop}
+            setSelectedCrop={setSelectedCrop}
+            selectedLGA={selectedLGA}
+            setSelectedLGA={setSelectedLGA}
+            uniqueCrops={uniqueCrops}
+            uniqueLGAs={uniqueLGAs}
+          />
+          
+          <FarmersStatsSection 
+            data={filteredData}
+            totalFarmers={filteredData.length}
+          />
+          
+          <FarmersTableSection 
+            currentItems={currentItems}
+            currentPage={currentPage}
+            itemsPerPage={itemsPerPage}
+            totalPages={totalPages}
+            paginate={paginate}
+            totalFarmers={filteredData.length}
+            />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
