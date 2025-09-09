@@ -30,6 +30,8 @@ const satoshiFont = localFont({
   ],
 });
 
+
+
 export default function RootLayout({
   children,
 }: Readonly<{
