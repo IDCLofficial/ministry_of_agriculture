@@ -1,7 +1,8 @@
 import React from 'react';
+import { Farmer } from './types';
 
 interface FarmersTableSectionProps {
-  currentItems: any[];
+  currentItems: Farmer[];
   currentPage: number;
   itemsPerPage: number;
   totalPages: number;

@@ -27,13 +27,13 @@ export default function FarmersPage() {
         
         // Filter out entries with null names and clean the data
         const cleanData = jsonData
-          .filter((item: any) => 
+          .filter((item: Farmer) => 
             item.NAME && 
             item.NAME !== 'TOTAL' && 
             item.NAME !== null && 
             item.NAME.trim() !== ''
           )
-          .map((item: any) => ({
+          .map((item: Farmer) => ({
             ...item,
             'SIZE OF FARM': typeof item['SIZE OF FARM'] === 'string' 
               ? parseFloat(item['SIZE OF FARM'].replace(/,/g, '')) || 0 
