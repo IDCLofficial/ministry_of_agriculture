@@ -9,13 +9,11 @@ import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import FeaturedPartners from "./components/FeaturedPartners";
 import { getProject } from "./projects/projects";
 import { Project } from "../../lib/types";
-import Chatbot from "./components/Chatbot";
 
 export default async function Home() {
   const projectList = await getProject();
   return (
     <>
-      <Chatbot />
       <div className="h-screen w-full bg-red-400">
         <Hero
           title="Imo State Ministry of Agriculture" 
