@@ -26,8 +26,8 @@ export const defaultMetadata: Metadata = {
     'Agricultural Training'
   ],
   authors: [{ name: 'Imo State Ministry of Agriculture' }],
-  creator: 'Imo State Government',
-  publisher: 'Imo State Ministry of Agriculture',
+  creator: 'Imo Digital City Limited',
+  publisher: 'Imo Digital City Limited',
   formatDetection: {
     email: false,
     address: false,
@@ -46,7 +46,7 @@ export const defaultMetadata: Metadata = {
     siteName: siteName,
     images: [
       {
-        url: '/images/agriculture.jpg',
+        url: '/logo.png',
         width: 1200,
         height: 630,
         alt: 'Imo State Farmland',
@@ -58,7 +58,7 @@ export const defaultMetadata: Metadata = {
     title: siteName,
     description: siteDescription,
     creator: twitterHandle,
-    images: ['/images/agriculture.jpg'],
+    images: ['/logo.png'],
   },
   robots: {
     index: true,

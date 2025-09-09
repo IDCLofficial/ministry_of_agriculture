@@ -3,6 +3,7 @@ import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
 import Chatbot from "@/app/components/Chatbot";
+import { defaultMetadata } from "@/app/metadata";
 
 const satoshiFont = localFont({
   src: [
@@ -28,6 +29,9 @@ const satoshiFont = localFont({
     },
   ],
 });
+
+export const metadata = defaultMetadata;
+
 
 
 
