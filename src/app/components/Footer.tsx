@@ -140,7 +140,7 @@ export default function Footer() {
                 </div>
                 </div>
             </div>
-            <div className="border-t border-gray-200 text-center py-3 text-xs text-gray-500">Imo State Government</div>
+            <div className="border-t border-gray-200 text-center py-3 text-xs text-gray-500">Imo State Government. Powered by <a href="https://imodigitalcity.com" target="_blank" rel="noopener noreferrer" className="text-green-600 hover:underline">Imo Digital City Limited.</a></div>
         </footer>
     );
 } 
