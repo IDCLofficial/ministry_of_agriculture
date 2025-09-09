@@ -105,7 +105,7 @@ const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }) => {
               className="max-h-[80vh] max-w-full object-contain bg-black"
             />
             {/* Caption */}
-            <div className="bg-white px-4 py-3 text-sm text-gray-700">{viewer.title}</div>
+            <div className="bg-white bg px-4 py-3 text-sm text-gray-700">{viewer.title}</div>
           </div>
         </div>
       )}
