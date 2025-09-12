@@ -5,7 +5,7 @@ module.exports = {
 
   deploy : {
     production : {
-      key: 'agric.pem',
+      key: 'newa.pem',
       user : 'ubuntu',
       host : 'agric',
       ref  : 'origin/main',
