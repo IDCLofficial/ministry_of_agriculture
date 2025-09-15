@@ -13,6 +13,8 @@ proxy:
   ssl: true
   host: agric.im.gov.ng
   app_port: 3000
+  healthcheck:
+    path: /
 
 # Credentials for your image host.
 registry:
