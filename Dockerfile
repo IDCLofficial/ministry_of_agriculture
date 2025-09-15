@@ -22,13 +22,16 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED=1
 
-# Set the environment variable for the build
-ARG NEXT_PUBLIC_MINISTRY_ID
-ARG NEXT_PUBLIC_CONTENTFUL_SPACE_ID
-ARG NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
-ARG NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
-
-RUN NODE_OPTIONS="--max-old-space-size=2048" npm run build -- --no-lint
+# Set the environment variables from secrets for the build
+RUN --mount=type=secret,id=NEXT_PUBLIC_MINISTRY_ID \
+    --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_SPACE_ID \
+    --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN \
+    --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN \
+    NEXT_PUBLIC_MINISTRY_ID=$(cat /run/secrets/NEXT_PUBLIC_MINISTRY_ID) \
+    NEXT_PUBLIC_CONTENTFUL_SPACE_ID=$(cat /run/secrets/NEXT_PUBLIC_CONTENTFUL_SPACE_ID) \
+    NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN=$(cat /run/secrets/NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN) \
+    NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN=$(cat /run/secrets/NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN) \
+    NODE_OPTIONS="--max-old-space-size=2048" npm run build -- --no-lint
 
 # Production image, copy all the files and run next
 FROM base AS runner
