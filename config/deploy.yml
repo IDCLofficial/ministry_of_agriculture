@@ -7,7 +7,7 @@ image: IDLCofficial/ministry_of_agriculture
 # Deploy to these servers.
 servers:
   web:
-    - 192.168.0.1
+    - 99.81.72.24
 
 proxy:
   ssl: true
