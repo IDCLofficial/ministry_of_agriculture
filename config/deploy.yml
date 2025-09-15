@@ -22,6 +22,9 @@ registry:
   password:
     - KAMAL_REGISTRY_PASSWORD
 
+ssh:
+  user: kamal
+
 # Configure builder setup.
 builder:
   arch: amd64
