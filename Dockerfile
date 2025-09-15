@@ -27,7 +27,7 @@ RUN --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID,env=NEXT_PUBLIC_CO
     --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_SPACE_ID,env=NEXT_PUBLIC_CONTENTFUL_SPACE_ID \
     --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN,env=NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN \
     --mount=type=secret,id=NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN,env=NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN \
-    NODE_OPTIONS="--max-old-space-size=2048" npm run build -- --no-lint
+    NODE_OPTIONS="--max-old-space-size=2048" echo $NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID && npm run build -- --no-lint
 
 # Production image, copy all the files and run next
 FROM base AS runner
