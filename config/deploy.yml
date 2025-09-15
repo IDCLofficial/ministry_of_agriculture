@@ -2,7 +2,7 @@
 service: ministry_of_agriculture
 
 # Name of the container image.
-image: IDLCofficial/ministry_of_agriculture
+image: idlcofficial/ministry_of_agriculture
 
 # Deploy to these servers.
 servers:
