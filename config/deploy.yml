@@ -45,7 +45,7 @@ builder:
 
 # Environment variables to set in the container.
 env:
-  secrets:
+  secret:
     - NEXT_PUBLIC_CONTENTFUL_MINISTRY_ID
     - NEXT_PUBLIC_CONTENTFUL_SPACE_ID
     - NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
