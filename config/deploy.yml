@@ -1,0 +1,36 @@
+# Name of your application. Used to uniquely configure containers.
+service: ministry_of_agriculture
+
+# Name of the container image.
+image: IDLCofficial/ministry_of_agriculture
+
+# Deploy to these servers.
+servers:
+  web:
+    - 192.168.0.1
+
+proxy:
+  ssl: true
+  host: agric.im.gov.ng
+  app_port: 3000
+
+# Credentials for your image host.
+registry:
+  server: ghcr.io
+  username:
+    - KAMAL_REGISTRY_USERNAME
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+# Configure builder setup.
+builder:
+  arch: amd64
+  cache:
+    type: gha
+  secrets:
+    - KAMAL_REGISTRY_USERNAME
+    - KAMAL_REGISTRY_PASSWORD
+    - NEXT_PUBLIC_MINISTRY_ID
+    - NEXT_PUBLIC_CONTENTFUL_SPACE_ID
+    - NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN
+    - NEXT_PUBLIC_CONTENTFUL_PREVIEW_ACCESS_TOKEN
