@@ -4,6 +4,14 @@ import CTASection from "../components/CTASection";
 import ProjectsSection from "./ProjectsSection";
 import { getProject } from "./projects";
 import { Project } from "../../../lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "Projects",
+  description: "Projects and programmes of the Ministry of Agriculture, Imo State Government.",
+  path: "/projects",
+});
+
 
 export default async function ProjectsPage() {
   const projects = await getProject()

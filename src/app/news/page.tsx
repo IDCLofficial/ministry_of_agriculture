@@ -4,6 +4,14 @@ import NewsGrid from "./NewsGrid";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 import { getNewsList } from "./newsList";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "News",
+  description: "Latest news, announcements and updates from the Ministry of Agriculture, Imo State.",
+  path: "/news",
+});
+
 
 export default async function NewsPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const newsList = await getNewsList();

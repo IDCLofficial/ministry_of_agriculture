@@ -9,6 +9,14 @@ import FeaturedInitiatives from "./components/FeaturedInitiatives";
 import FeaturedPartners from "./components/FeaturedPartners";
 import { getProject } from "./projects/projects";
 import { Project } from "../../lib/types";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Agriculture | Imo State Government" },
+  description: "Official website of the Ministry of Agriculture, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default async function Home() {
   const projectList = await getProject();

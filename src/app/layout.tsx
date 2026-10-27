@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
 import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
 import Chatbot from "@/app/components/Chatbot";
 import { defaultMetadata } from "@/app/metadata";
+import { buildRootMetadata, jsonLd, organizationJsonLd } from "@/lib/seo";
 
 const satoshiFont = localFont({
   src: [
@@ -30,7 +32,10 @@ const satoshiFont = localFont({
   ],
 });
 
-export const metadata = defaultMetadata;
+const baseMetadata: Metadata = defaultMetadata;
+
+export const metadata = buildRootMetadata(baseMetadata);
+
 
 
 
@@ -45,6 +50,7 @@ export default function RootLayout({
       <body
         className={`antialiased ${satoshiFont.className}`}
       >
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(organizationJsonLd) }} />
         <Navbar />
         <Chatbot />
         <PageTransitionWrapper>
