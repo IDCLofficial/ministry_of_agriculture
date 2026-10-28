@@ -11,7 +11,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "About Us",
-  description: "About the Ministry of Agriculture of the Imo State Government: who we are and what we do.",
+  description: "Mission, vision and objectives of the Imo State Ministry of Agriculture and Food Security: food security, farmer empowerment and agribusiness.",
   path: "/about-us",
 });
 

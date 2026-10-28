@@ -5,8 +5,8 @@ import ServicesSection from "./ServicesSection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Services",
-  description: "Services offered by the Ministry of Agriculture of the Imo State Government.",
+  title: "Farmer Registration and Subsidies",
+  description: "Agricultural extension, grant and subsidy applications, farmer registration, farmland allocation, veterinary services and agro-processing support in Imo State.",
   path: "/services",
 });
 

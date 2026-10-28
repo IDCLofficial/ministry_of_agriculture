@@ -12,8 +12,8 @@ import { Project } from "../../lib/types";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Agriculture | Imo State Government" },
-  description: "Official website of the Ministry of Agriculture, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Agriculture and Food Security" },
+  description: "Imo State Ministry of Agriculture and Food Security: farmer registration, extension services, subsidies and grants, veterinary services and farmland allocation.",
   path: "/",
 });
 

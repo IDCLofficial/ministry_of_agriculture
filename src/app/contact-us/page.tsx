@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact Us",
-  description: "Contact the Ministry of Agriculture, Imo State Government: office location and ways to reach the ministry.",
+  description: "Contact the Ministry of Agriculture and Food Security, Imo State Government: office location and ways to reach the ministry.",
   path: "/contact-us",
 });
 
