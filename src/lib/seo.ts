@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 // Verified production domain (Vercel project domain). Override per environment if needed.
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://agric.im.gov.ng").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SEO_SITE_URL || "https://agric.im.gov.ng").replace(/\/$/, "");
 export const SITE_NAME = "Ministry of Agriculture and Food Security";
 export const DEFAULT_DESCRIPTION =
   "Official website of the Ministry of Agriculture and Food Security, Imo State Government: services, departments, projects, news and events.";
